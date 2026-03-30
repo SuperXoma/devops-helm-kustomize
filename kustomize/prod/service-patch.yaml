@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Service
+spec:
+  ports:
+    - name: flask-port
+      port: 54000
+      targetPort: 5000

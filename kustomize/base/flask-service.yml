@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-front
+  labels:
+    app: flask-app
+    svc: flask-front
+spec:
+  type: NodePort
+  selector:
+    app: flask-app
+    svc: front
+  ports:
+    - name: flask-port
+      port: 12345
+      targetPort: 5000
+      nodePort: 30081
